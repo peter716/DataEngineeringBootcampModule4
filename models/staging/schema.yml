@@ -1,0 +1,16 @@
+version: 2
+
+sources:
+  - name: staging
+    database: digital-gearbox-411612
+     # For postgres:
+      #database: production
+    schema: ny_taxi
+
+      # loaded_at_field: record_loaded_at
+    tables:
+      - name: green_tripdata_table
+      - name: yellow_tripdata_table
+         # freshness:
+           # error_after: {count: 6, period: hour}
+
